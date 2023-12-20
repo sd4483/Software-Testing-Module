@@ -1,43 +1,41 @@
 package Lab_01;
 
 public class Task04 {
-	public static void main(String[] args) {
-	       //addOld(-10,10);
-	       addNew(-10,10);
-	       addNew(0,-10);
-	       addNew(252,-253);
-	    }
+	
+	public static int addNew(int x, int y) {
+		
+		int sum = y;
 	    
-		/*
-		public static void addOld(int x, int y) {
-	        int sum = y;
-	        while (x != 0){
-	            if (x < 0) {
-	                sum = sum - 1;
-	                x = x + 1;
-	            }
-	            else {
-	                sum = sum + 1;
-	                x = x - 1;
-	            }
-	        }
-	        System.out.println(sum);
-	    }
-		*/
+		do {
+	    	sum = sum - 1;
+	        x = x + 1;
+	    } while(x <= 0);
+	        
+	    do {
+	        sum = sum + 1;
+	        x = x - 1;
+	    } while(x > 0);
 	    
-	    public static void addNew(int x, int y) {
-	        int sum = y;
+	    return sum;
 	        
-	        do {
-	        	sum = sum - 1;
-	        	x = x + 1;
-	        }while(x <= 0);
-	        
-	        do {
-	        	sum = sum + 1;
-	        	x = x - 1;
-	        }while(x > 0);
-	        
-	        System.out.println(sum);
-	    }
+	}
+	
+	public static int addOld(int x, int y) {
+		
+		int sum = y;
+		
+		while (x != 0) 
+		{	
+			if (x < 0) {
+				sum = sum - 1;
+				x = x + 1;
+			}
+			
+			else {
+				sum = sum + 1;
+				x = x - 1;
+			}
+		}
+		return sum;
+	}
 }
